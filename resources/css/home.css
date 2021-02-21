@@ -29,7 +29,7 @@ body::-webkit-scrollbar-thumb{
 /*main nav background / background*/
 .nav-menu{
     width:100%;
-    background-image: url('../logos_and_media/nav-cover.jpg');
+    background-image: url('../logos_and_media/nav-back-img.jpg');
     background-size:100% 60%;
     background-repeat:no-repeat;
     height:65vh;
@@ -39,14 +39,15 @@ body::-webkit-scrollbar-thumb{
    
 }
 
-.logo{
+/*.logo{
     position:relative;
-    top:5px;
+    top:-17px;
     left:10px;
     justify-content:center;
     height:60px;
+
     
-}
+}*/
 
 .fa-search{
     color:white;
@@ -91,8 +92,8 @@ body::-webkit-scrollbar-thumb{
 /*mobile menu bar*/
 .burger > div{
     background: gray;
-    height:3px;
-    width:8%;
+    height:7px;
+    width:10%;
     position:relative;
     top:20px;
     bottom:35px;
@@ -118,7 +119,7 @@ body::-webkit-scrollbar-thumb{
     padding-bottom:15px;
 }
 .nav-socials{
-    padding-left:2%;
+    text-align:center;
 
 }
 
@@ -143,12 +144,13 @@ body::-webkit-scrollbar-thumb{
 
 /* menu close X clickable symbol*/
 .close{
+    cursor:pointer;
     color:white;
     opacity:0.7; 
     font-size:40px;
-    margin-left:32%;
-    position:absolute;
-    left:230px;
+    margin-left:19%;
+    position:relative;
+    left:180px;
     margin-bottom:12px;
 }
 
@@ -175,19 +177,24 @@ body::-webkit-scrollbar-thumb{
     font-weight:bold;
     font-size:30px;
     text-align:center;
-    padding-top:10px;
-    padding-bottom:50px;
+    margin-bottom:2pc;
+}
+
+.on-sale-merch{
+    position:relative;
+    bottom:50px;
 }
 
 
 .second-sec{
-   margin-top:50px;
+   margin-top:5pc;
    margin-left:5%;
    margin-right:5%;
 }
 
 .third-sec{
     position:relative;
+    top:4pc;
     height:500px;
 }
 
@@ -203,6 +210,7 @@ body::-webkit-scrollbar-thumb{
 .Ignorant-h{
     font-family:sans-serif;
     position:relative;
+    margin-bottom:20%;
     text-align:center;
     margin-right:10%;
 }
@@ -240,9 +248,10 @@ body::-webkit-scrollbar-thumb{
     left:75%; 
  }
  
- .billbord-heading{
-    text-align:center;
+ .billboard-heading{  
+    margin-top:5pc;
  }
+
  .billboard-img{
     width:100%;
     border-radius:5px;
@@ -260,7 +269,7 @@ body::-webkit-scrollbar-thumb{
     overflow-x:scroll;
     position:relative;
     display:flex;
-    bottom:0px;
+    top:3pc;
 }
 .album-container img{
     scroll-snap-align:center;
@@ -291,11 +300,11 @@ i{
 }
 
 .fa-facebook{
-    color:rgb(29, 117, 233)
+    color:rgb(68, 135, 223)
 }
 
 .fa-twitter{
-    color:rgb(65, 193, 236);
+    color:rgb(43, 156, 194);
 }
 .fa-spotify{
     color:rgb(30,215,96);
@@ -321,7 +330,17 @@ i{
     top:50px;
     left:30%;
 }
+.booking-email{
+    font-size:10px;
+}
 
+
+/* Media Queries*/
+@media(min-width:640px){
+    .burger > div{
+        display:none;
+    }
+}
 
 
 
