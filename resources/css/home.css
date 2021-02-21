@@ -52,7 +52,6 @@ body::-webkit-scrollbar-thumb{
 .fa-search{
     color:white;
     position:relative;
-    top:7px;
     font-size:15px;
     right:48px;
 }
@@ -60,6 +59,9 @@ body::-webkit-scrollbar-thumb{
 .search-field{
    display:none;
    margin-left:5%;
+   position:relative;
+   top:80px;
+   left:35%;
 
 }
 
@@ -67,11 +69,12 @@ body::-webkit-scrollbar-thumb{
 .search{
     width:190px;
     border:none;
-    border-bottom:1.9px solid white;
+    border-bottom:3px solid white;
+    border-top: 3px solid white;
     border-radius:5px;
     padding:7px;
     background:none;
-    color:rgb(248, 242, 242);
+    color:rgb(173, 37, 185);
     height:25px;
 }
 
@@ -93,7 +96,7 @@ body::-webkit-scrollbar-thumb{
 .burger > div{
     background: gray;
     height:7px;
-    width:10%;
+    width:13%;
     position:relative;
     top:20px;
     bottom:35px;
@@ -116,8 +119,15 @@ body::-webkit-scrollbar-thumb{
     animation-duration:0.8s;
     border: 1px solid white;
     border-radius:2px;
-    padding-bottom:15px;
+    padding-bottom:35px;
 }
+
+.desktop-menu{
+    display:flex;
+   flex-wrap:wrap;
+   justify-content:space-between;
+}
+
 .nav-socials{
     text-align:center;
 
@@ -325,19 +335,75 @@ i{
     color:white;
     padding-top:20px;
 }
+
 .copyright{
     position:relative;
     top:50px;
     left:30%;
 }
+
 .booking-email{
     font-size:10px;
 }
 
 
 /* Media Queries*/
-@media(min-width:640px){
+
+/* landscape mobile devices*/
+@media(min-width:640px){ 
+    .search-field{
+        display:inline-block;
+    }
+
+    #menu{
+        display:flex;
+        border:none;
+        justify-content:space-between;
+        
+        font-size:1em;
+    }
+
     .burger > div{
+        display:none;
+    }
+
+    .close{
+        display:none;
+    }
+}
+
+/* tablets*/
+@media(min-width:790px){
+    .tour-container1{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-gap:5%;
+        position:relative;
+        bottom:7pc;
+        margin-right:10%;
+        margin-left:10%;
+    }
+    .Ignorant-h{
+       position:relative;
+       left:15%;
+       top:3.5vh;
+       margin-right:25%;
+       margin-left:35%;
+       font-size:1.2em; 
+    }
+    .tour-container2{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-gap:5%;
+        margin-right:7%;
+        margin-left:25%;
+    }
+    .billboard-img{
+        width:100%;
+    }
+    .dead5{
+        left:0;
+        top:10pc;
         display:none;
     }
 }

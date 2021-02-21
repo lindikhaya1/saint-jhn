@@ -17,5 +17,4 @@ let events = ()=>{
 }
 
 //code for responsiveness
-
 events();
