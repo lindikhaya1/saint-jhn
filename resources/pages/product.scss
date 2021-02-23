@@ -95,6 +95,17 @@ div.values{
 
 }
 
+.fa-arrow-left{
+    font-size:23px;
+    animation-name:arrow-rotate;
+    animation-duration:1s;
+}
+
+@keyframes arrow-rotate{
+    from{transform: roatate(0deg)};
+    to{transform: rotate(360deg)}
+}
+
 
 @media(max-width:320px){
     .button{

@@ -5,7 +5,7 @@
 body {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 nav {
@@ -91,6 +91,36 @@ div.values div:nth-child(2) {
   border-radius: 50%;
   position: absolute;
   left: 80%;
+}
+
+.fa-arrow-left {
+  font-size: 23px;
+  -webkit-animation-name: arrow-rotate;
+          animation-name: arrow-rotate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes arrow-rotate {
+  from {
+    -webkit-transform: roatate(0deg);
+            transform: roatate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes arrow-rotate {
+  from {
+    -webkit-transform: roatate(0deg);
+            transform: roatate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 320px) {
