@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+*, *::before, *::after{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0; 
+    padding:0;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Aclonica', sans-serif; 
+    overflow-x:hidden;
+}
+
+/* #### styling the srcollbar ####*/
+body::-webkit-scrollbar{
+    width:12px
+}
+body::-webkit-scrollbar-track{
+    background:black;
+}
+body::-webkit-scrollbar-thumb{
+    background-color:palevioletred;
+    border-radius:20px;
+    border:3px solid palevioletred;
+}
+
+
+
+/*main nav background / background*/
+.nav-menu{
+    width:100%;
+    padding-top:2%;
+    background-image: url('../logos_and_media/nav-cover.jpg');
+    background-size:100% 30%;
+    background-repeat:no-repeat;
+    height:62vh;
+}
+/*mobile menu bar*/
+.burger > div{
+    background: rgb(0, 0, 0);
+    height:5px;
+    width:3.5pc;
+    position:relative;
+    top:px;
+    left:10px;
+    margin:5px;
+    border:1px solid white;
+    border-radius:10px;
+}
+
+/*merch product slide*/
+.slider-container{
+    margin-top:20px;
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+    overflow-x:scroll;
+    display:flex;
+}
+
+.slider-img{
+    width:170px; 
+}
+
+.merch{
+    text-align:center;
+}
+
+.headings{
+    font-family: 'Aclonica', sans-serif;
+    font-weight:bold;
+    font-size:1.5em;
+    text-align:center;
+    padding-top:10px;
+    padding-bottom:50px;
+}
+
+ 
+
+
+
+
+
+
+

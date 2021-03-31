@@ -1,0 +1,157 @@
+@mixin link-fix{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+}
+
+*{
+    overflow:hidden;
+}
+
+body{
+  padding:0;
+  margin:0;
+  overflow:hidden;  
+}
+
+nav{
+    background-color:black;
+    color:white;
+    height:40px;
+    width:105%;
+    padding:12px;
+}
+
+.back{
+    a{
+        @include link-fix;
+    }
+}
+
+h3{
+    text-align:center;
+}
+
+.sub-product-container{
+    position:relative;
+    left:0%;
+    top:10%;
+}
+
+.discription{
+    display:flex;
+    position:relative;
+    margin-right: right 50%;
+    div{
+       padding-left:16.3%;
+    }
+    div:nth-of-type(1){
+        padding-right:12px;
+    }
+}
+
+div.values{
+ display:flex;
+ 
+ div{
+    padding-left:21%;
+ }
+
+ div:nth-child(2){
+    position:relative;
+    left:10px;
+ }
+}
+
+.button{
+   background-color:black;
+   color:white;
+   border:none;
+   border-radius:20px;
+   padding:40px;;
+   margin:10%;
+   width:80%;
+   position:relative;
+   right:0%;
+
+}
+
+.fab{
+    position:relative;
+    font-size:32px;
+    left:88%;
+}
+
+.cart-items{
+    display:none;
+    background-color:green;
+    padding:2px 3px 5px 10px;
+    height:20px;
+    width:20px;
+    color:white;
+    border-radius:50%;
+    position:absolute;
+    left:80%;
+
+}
+
+
+@media(max-width:320px){
+    .button{
+     bottom:30px;
+    }
+    .sub-product-container{
+     bottom:15px;
+    }
+}
+
+@media(min-width:403px){
+    body{
+        font-size:12px;
+    }
+    
+}
+
+@media(min-width:502px){
+   .discription{
+       padding-left:4%;
+   }
+}
+
+@media(min-width:602px){
+    .sub-product-container{
+        margin-left:30%;
+        margin-right:30%;
+    }
+    .discription{
+        display:block;
+        position:absolute;
+        padding-left:0;
+        border-left:1px solid black;
+        border-radius:20%;
+        padding-right:12px;
+    }
+    div.values{
+        display:block;
+
+        div:nth-child(1){
+            position:relative;
+            left:10px;
+        }
+    }
+    .button{
+        bottom:30%;
+    }
+
+    .cart-items{
+        left:95%;
+    }
+    
+}
+
+/*@media(min-width:902px){
+    .cart-items{
+        left:95% + 20%
+    }
+}*/
+
