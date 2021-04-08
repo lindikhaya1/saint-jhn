@@ -11,6 +11,9 @@ body{
     font-family: 'Aclonica', sans-serif; 
     overflow-x:hidden;
 }
+ul{
+    list-style:none;
+}
 
 /* #### styling the srcollbar ####*/
 body::-webkit-scrollbar{
@@ -25,55 +28,283 @@ body::-webkit-scrollbar-thumb{
     border:3px solid palevioletred;
 }
 
+.slider-container::-webkit-scrollbar{
+    width:80px
+}
+.slider-container::-webkit-scrollbar-track{
+    background:black;
+}
+.slider-container::-webkit-scrollbar-thumb{
+    background-color:palevioletred;
+    border-radius:20px;
+    border:3px solid palevioletred;
+}
 
 
 /*main nav background / background*/
-.nav-menu{
+.mobile-nav-menu{
+    font-family: 'Poiret One', cursive;
     width:100%;
     padding-top:2%;
     background-image: url('../logos_and_media/nav-cover.jpg');
     background-size:100% 30%;
     background-repeat:no-repeat;
-    height:62vh;
+    height:27pc;
+    position:fixed;
+    z-index:3;
 }
+
 /*mobile menu bar*/
 .burger > div{
     background: rgb(0, 0, 0);
     height:5px;
     width:3.5pc;
     position:relative;
-    top:px;
     left:10px;
+    display:block;
     margin:5px;
     border:1px solid white;
     border-radius:10px;
 }
 
-/*merch product slide*/
+.mobile-menu{
+    z-index:2;
+    display:none;
+    color:rgb(0, 0, 0);
+    background-color:rgb(236, 231, 220);
+    padding:7%;
+    margin-top:2%;
+    width:100%;
+    font-weight:bold;
+    font-size:1em;
+    padding-bottom:7pc;
+    position:relative;
+}
+
+#mobile-menu-li{
+    /*border:1px solid green;*/
+    position:relative;
+    right:2pc;
+    padding-top:9%;
+    margin:auto; 
+    text-align:center;
+    animation-name:appear;
+    animation-duration:0.8s;
+}
+
+
+.mobile-menu-link{
+    text-decoration:none;
+    color:rgb(54, 51, 51);
+    
+}
+.mobile-menu-icons{
+    color:rgb(73, 71, 71);
+    font-size:1.2em;
+    padding:4vw 4vw ;
+    padding-left:2%;
+    position:relative;
+    left:17%;
+    animation-name:appear;
+    animation-duration:0.9s;
+
+}
+.mobile-search-container{
+    margin-left:2pc;
+    margin-right:3.5pc;
+
+}
+.mobile-search{
+    border:none;
+    background-color:rgb(201, 197, 197);
+    color:black;
+    border-radius:2px;
+    padding:5%;
+    width:95%;
+    position:relative;
+    left:0.5pc;
+}
+
+.mobile-web-formalities{
+    font-size:0.8em;
+    animation-name:appear;
+    animation-duration:1s;
+    padding-top:2%;
+    position:relative;
+    left:13%;
+    width:200px;
+}
+
+@keyframes appear{
+    from{opacity:0.0};
+    from{font-weight:lighter};
+    to{opacity:none};
+    to{font-weight:bold};
+}
+
+.mobile-copyright{
+    font-family: 'Public Sans', sans-serif;
+    color:rgb(100, 92, 92);
+    position:relative;
+    left:15%;
+    margin-right:9%;
+    font-size:0.8em;
+    margin-top:2%;
+}
+/* #### end of the mobile nav section ####*/
+
+.nav-gallery{
+   position:relative;
+   top:10pc;
+   margin-right:2%;
+   margin-left:8%;
+}
+
+
+.nav-gallery-img{
+    width:30%;
+}    
+
+/* ***merch product slide*** */
 .slider-container{
-    margin-top:20px;
+    padding-top:-80px;
     width:70%;
-    margin-left:15%;
-    margin-right:15%;
-    overflow-x:scroll;
+    margin:auto;
+    height:150px;
     display:flex;
+    overflow-x:scroll;
+    position:relative;
+    border:2px solid green;
+    top:20pc;
 }
 
 .slider-img{
-    width:170px; 
+    width:100%;
+    height:70%;
 }
 
-.merch{
+.merch-heading{
     text-align:center;
+    position:relative;
+    top:17pc;
 }
 
-.headings{
-    font-family: 'Aclonica', sans-serif;
-    font-weight:bold;
-    font-size:1.5em;
-    text-align:center;
-    padding-top:10px;
-    padding-bottom:50px;
+
+@media(min-width:500px){
+    .mobile-menu-icons{
+        position:relative;
+        left:29%;
+    }
+    .web-formalities{
+        left:30%;
+    }
+}
+
+@media(min-width:1024px){
+    body{
+       overflow-x:scroll;
+       overflow-y:hidden;
+       display:grid;
+       grid-template-columns:repeat(2,40%); 
+    }
+
+    .nav-section{
+        margin-right:15pc;
+    }
+
+    .content-section{
+        display:flex;
+        position:relative;
+        right:59%;
+        height:100vw;
+        margin:auto;
+    }
+
+    .mobile-nav-menu{
+        background-image:unset;
+        background-color:black;
+        height:100%;
+        width:17%;
+        position:fixed;
+        display:inline-block;
+    }
+    
+    .burger > div{
+        display:none;
+    }
+
+    .mobile-menu{
+        display:inline;
+        background-color:unset;
+    }
+
+    #mobile-menu-li{
+        text-align:center;
+        padding-top:20%;
+    }
+
+    .mobile-menu-link{
+        color:white;
+    }
+
+    .mobile-menu-icons{
+        color:rgb(216, 215, 215);
+        font-size:1.2em;
+        padding:unset;
+        padding-left:2%;
+        position:relative;
+        display:block;
+        left:25%;
+    }
+
+    .mobile-search-container{
+        display:none;
+    
+    }
+
+    .mobile-web-formalities{
+        font-size:0.8em;
+        animation-name:appear;
+        animation-duration:1s;
+        padding-top:2%;
+        position:relative;
+        left:unset;
+        width:200px;
+        
+    }
+    .mobile-copyright{
+        display:none;
+        font-family: 'Public Sans', sans-serif;
+        color:rgb(228, 222, 222);
+        position:relative;
+        left:unset;
+        margin-right:9%;
+        font-size:0.8em;
+    }
+    .nav-gallery{
+        height:90vh;
+        position:relative;
+        top:70px;
+        margin-left:50px;
+        padding:0;
+    }
+    .nav-gallery-img{
+        width:30%;
+        height:20%;
+    }
+    .slider-container{
+        margin:0;
+        width:80%;
+        height:50vh;
+        margin-right:50pc;
+        overflow-x:none;
+        position:relative;
+        margin-bottom:90px;
+    }
+    .slider-img{
+        width:15pc;
+    }
+
 }
 
  
