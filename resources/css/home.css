@@ -163,7 +163,15 @@ body::-webkit-scrollbar-thumb{
 
 .nav-gallery-img{
     width:30%;
-}    
+} 
+
+.content1, .content2,.content3, .content4,.content5, .content6,.content7,
+.content8,
+.content9,
+.content10,
+.content11{
+    position:absolute;
+}
 
 /* ***merch product slide*** */
 .slider-container{
@@ -174,13 +182,20 @@ body::-webkit-scrollbar-thumb{
     display:flex;
     overflow-x:scroll;
     position:relative;
-    border:2px solid green;
     top:20pc;
 }
 
 .slider-img{
     width:100%;
     height:70%;
+}
+
+.merch-container{
+    padding-right:2pc;
+}
+
+.merch-price{
+    font-weight:lighter;
 }
 
 .merch-heading{
@@ -294,16 +309,23 @@ body::-webkit-scrollbar-thumb{
     }
     .slider-container{
         margin:0;
-        width:80%;
+        width:120%;
         height:50vh;
         margin-right:50pc;
         overflow-x:none;
         position:relative;
-        margin-bottom:90px;
+        top:-5pc;
+        top:13pc;
     }
     .slider-img{
         width:15pc;
     }
+
+   .merch-container{
+    padding-right:3pc;
+    padding-left:2pc;
+    }
+
 
 }
 
