@@ -46,32 +46,36 @@ body::-webkit-scrollbar-thumb{
     font-family: 'Poiret One', cursive;
     width:100%;
     padding-top:2%;
-    background-image: url('../logos_and_media/nav-cover.jpg');
+    background-image: url('../logos_and_media/nav-img1.jpg');
     background-size:100% 30%;
     background-repeat:no-repeat;
-    height:27pc;
+    height:23pc;
     position:fixed;
     z-index:3;
 }
 
 /*mobile menu bar*/
+div.burger{
+    float:right;
+    margin-right:10%;
+}
 .burger > div{
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     height:5px;
     width:3.5pc;
     position:relative;
-    left:10px;
+    left:12px;
     display:block;
     margin:5px;
     border:1px solid white;
-    border-radius:10px;
+    
 }
 
 .mobile-menu{
     z-index:2;
     display:none;
-    color:rgb(0, 0, 0);
-    background-color:rgb(236, 231, 220);
+    background-color:rgb(0, 0, 0);
+    color:red;
     padding:7%;
     margin-top:2%;
     width:100%;
@@ -79,6 +83,13 @@ body::-webkit-scrollbar-thumb{
     font-size:1em;
     padding-bottom:7pc;
     position:relative;
+    animation-name:slide-down;
+    animation-duration:0.5s;
+    
+}
+@keyframes slide-down{
+    from{top:-50pc};
+    to{top:0vh};
 }
 
 #mobile-menu-li{
@@ -95,11 +106,12 @@ body::-webkit-scrollbar-thumb{
 
 .mobile-menu-link{
     text-decoration:none;
-    color:rgb(54, 51, 51);
+    color:rgb(245, 22, 22);
     
 }
+
 .mobile-menu-icons{
-    color:rgb(73, 71, 71);
+    color:rgb(146, 146, 146);
     font-size:1.2em;
     padding:4vw 4vw ;
     padding-left:2%;
@@ -109,6 +121,8 @@ body::-webkit-scrollbar-thumb{
     animation-duration:0.9s;
 
 }
+
+
 .mobile-search-container{
     margin-left:2pc;
     margin-right:3.5pc;
@@ -162,7 +176,7 @@ body::-webkit-scrollbar-thumb{
 
 
 .nav-gallery-img{
-    width:30%;
+    width:20%;
 } 
 
 .content1, .content2,.content3, .content4,.content5, .content6,.content7,
@@ -175,19 +189,24 @@ body::-webkit-scrollbar-thumb{
 
 /* ***merch product slide*** */
 .slider-container{
+    background-image:url('../logos_and_media/backgroundmerch.jpeg');
+    background-repeat:no-repeat;
+    background-size:50% 100%;
+    border-radius:10px;
     padding-top:-80px;
-    width:70%;
+    width:100%;
+    height:100vh;
     margin:auto;
     height:150px;
     display:flex;
     overflow-x:scroll;
+    overflow-y:hidden;
     position:relative;
     top:20pc;
 }
 
 .slider-img{
     width:100%;
-    height:70%;
 }
 
 .merch-container{
@@ -239,7 +258,7 @@ body::-webkit-scrollbar-thumb{
         background-image:unset;
         background-color:black;
         height:100%;
-        width:17%;
+        width: 10%;
         position:fixed;
         display:inline-block;
     }
@@ -257,21 +276,31 @@ body::-webkit-scrollbar-thumb{
         text-align:center;
         padding-top:20%;
     }
+    
+    .mobile-menu-link:hover{
+        color:gray;
+    }
 
     .mobile-menu-link{
         color:white;
+        font-size:0.8em;
     }
 
     .mobile-menu-icons{
         color:rgb(216, 215, 215);
         font-size:1.2em;
         padding:unset;
-        padding-left:2%;
         position:relative;
         display:block;
-        left:25%;
+        left:-0.0pc;
+        left:0.5pc;
     }
+     
 
+    .mobile-menu-icons:hover{
+        color:gray;
+    }
+    
     .mobile-search-container{
         display:none;
     
@@ -281,8 +310,9 @@ body::-webkit-scrollbar-thumb{
         font-size:0.8em;
         animation-name:appear;
         animation-duration:1s;
-        padding-top:2%;
+        padding-top:5%;
         position:relative;
+        right:2pc;
         left:unset;
         width:200px;
         
@@ -304,7 +334,7 @@ body::-webkit-scrollbar-thumb{
         padding:0;
     }
     .nav-gallery-img{
-        width:30%;
+        width:20%;
         height:20%;
     }
     .slider-container{
